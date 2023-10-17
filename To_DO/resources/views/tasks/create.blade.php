@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href = "{{ asset('css/create.css') }}" rel="stylesheet" >
 </head>
 <body>
     <h1>Create a Task:</h1>
