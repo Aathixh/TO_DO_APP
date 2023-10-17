@@ -18,7 +18,7 @@ class TaskController extends Controller
     }
 
     public function list(Request $request){
-            $request->validate([
+        $request->validate([
             'task' => 'required'
         ]);
         
@@ -28,5 +28,25 @@ class TaskController extends Controller
 
         return redirect(route('tasks.index'));
     }
+
+    public function edit(task $task){
+        return view('tasks.edit',['task'=> $task]);
+    }
+
+    public function update(task $task,Request $request){
+            $request->validate([
+            'task' => 'required'
+        ]);
+
+        $task->update([
+            'tasks' => $request->input('task')
+        ]);
+
+        return redirect(route('tasks.index'))->with('success','Task Updated');
+    }
     
+    public function destroy(task $task){
+        $task->delete();
+        return redirect(route('tasks.index'))->with('success','Task Deleted!');
+    }
 }

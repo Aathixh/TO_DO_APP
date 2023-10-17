@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Create a Task:</h1>
+    <h1>Edit the task:</h1>
     <div>
         @if($errors->any())
             <ul>
@@ -16,15 +16,15 @@
             </ul>
         @endif
     </div>
-    <form action="{{route('tasks.list')}}" method="post">
+    <form action="{{route('tasks.update',['task'=>$task])}}" method="post">
         @csrf
-        @method('post')
+        @method('put')
         <div>
             <label>Task:</label>    
-            <input type="text" name="task" placeholder="Enter the Task">
+            <input type="text" name="task" placeholder="Enter the Task" value="{{$task -> tasks}}">
         </div>
         <div>
-            <input type="submit" value="submit" >
+            <input type="submit" value="Update" >
         </div>
     </form>
 </body>
