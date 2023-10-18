@@ -4,4 +4,12 @@
 
 h1{
     text-align: center;
+    margin-top: 3rem;
+    font-size:4em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+body{
+    background-color: rgb(27, 25, 25);
 }

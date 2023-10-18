@@ -25,8 +25,8 @@
                 @enderror
 
                 <br/>
-                <div class="text-center">
-                    <input type="submit" value="Submit">
+                <div class="btn-inp">
+                    <input class="text-center" type="submit" value="Submit">
                 </div>
             </form>
         </div>
