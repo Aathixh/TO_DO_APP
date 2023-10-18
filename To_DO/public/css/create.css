@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+    margin-top: 10rem;
+    font-size:4em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.submit{
+    justify-content: center;
+}
+.background-image {
+    background-image: url(/images/create.jpg); /* Adjust the path to your image */
+    background-size: cover; /* Adjust as needed */
+    background-position: center center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the height to the viewport height (full height) */
+}
+.custom-input{
+    width: 20em;
+}

@@ -12,11 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <h1>Tasks</h1>
-    <div>
-        @if(session()->has('success'))
-            {{session('success')}}
-        @endif
-    </div>
+    
     <div class = "container">
         <div class="table_div">
             <table class="table table-dark table-hover">
@@ -46,8 +42,18 @@
             </table>
         </div>        
     </div>
+    @if(session()->has('success'))
+    <div class="alert alert-success row" role="alert">
+        <div class="col-11">
+            {{session('success')}}
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+    @endif
 
-    <div class="button-container">
+    <div class="button-container ">
             <a href="{{route('tasks.create')}}"><input type="submit" class="btn btn-outline-success" value="Add New Task"></a>
     </div>
 </body>

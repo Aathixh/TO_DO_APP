@@ -24,9 +24,9 @@ class TaskController extends Controller
         
         $newTask = task::create([
             'tasks' => $request->input('task')
-        ]);
-
-        return redirect(route('tasks.index'));
+        ]); 
+        
+        return redirect(route('tasks.index'))->with('success','Task Added Successfully!');
     }
 
     public function edit(task $task){
@@ -42,11 +42,11 @@ class TaskController extends Controller
             'tasks' => $request->input('task')
         ]);
 
-        return redirect(route('tasks.index'))->with('success','Task Updated');
+        return redirect(route('tasks.index'))->with('success','Task Updated Successfully!');
     }
     
     public function destroy(task $task){
         $task->delete();
-        return redirect(route('tasks.index'))->with('success','Task Deleted!');
+        return redirect(route('tasks.index'))->with('success','Task Deleted Successfully!');
     }
 }
