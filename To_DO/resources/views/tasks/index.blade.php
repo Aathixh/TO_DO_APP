@@ -26,9 +26,9 @@
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
-                @foreach($tasks as $task)
+                @foreach($tasks as $key => $task)
                     <tr>
-                        <td>{{$task->id}}</td>
+                        <td>{{$key+1}}</td>
                         <td>{{$task->tasks}}</td>
                         <td><a href="{{route('tasks.edit',['task' => $task -> id])}}">
                                 <button type="button" class="btn btn-outline-primary">Edit</button>
