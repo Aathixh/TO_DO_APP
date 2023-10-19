@@ -9,27 +9,32 @@
 </head>
 <body class="background-image">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <h1>Edit the task</h1>
 
     <div class="d-flex align-items-center justify-content-center">
-    <form action="{{route('tasks.update',['task'=>$task])}}" method="post" autocomplete="off" class="needs-validation">
-        @csrf
-        @method('put')
-        
-            <label for="validationCustom03" class="form-label"></label>    
-            <input class="form-control custom-input @error('task') is-invalid @enderror" type="text" name="task" placeholder="Enter the Task" value="{{$task -> tasks}}" id="validationCustom03">
+        <div> class="container">
+            <form action="{{route('tasks.update',['task'=>$task])}}" method="post" class="needs-validation form">
+                @csrf
+                @method('put')
+                <div class="form_front">
+                    <div class="form_details">
+                        Edit the Task
+                    </div>
+                        <label for="validationCustom03" class="form-label"></label>    
+                        <input class="input form-control custom-input @error('task') is-invalid @enderror" type="text" name="task" placeholder="Edit the Task" value="{{$task -> tasks}}" id="validationCustom03">
 
-            @error('task')
-                <div class="invalid-feedback">
-                    {{$message}}
+                        @error('task')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                        @enderror
+                
+                    </br>
+                    <div class="btn-inp">
+                        <input class="btn text-center" type="submit" value="Update" >
+                    </div>
                 </div>
-            @enderror
-        
-        </br>
-        <div class="btn-inp">
-            <input type="submit" value="Update" >
+            </form>
         </div>
-    </form>
     </div>
 </body>
 

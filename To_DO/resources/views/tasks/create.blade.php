@@ -9,14 +9,16 @@
 </head>
 <body class="background-image">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <h1>Create a Task</h1>
     
         <div class="d-flex align-items-center justify-content-center">
-            <form action="{{route('tasks.list')}}" method="post" class="needs-validation" >
+            <div class="container">
+            <form action="{{route('tasks.list')}}" method="post" class="needs-validation form" >
                 @csrf
                 @method('post')
+                <div  class="form_front">
+                    <div class="form_details">Create a Task</div>
                 <label for="validationCustom03" class="form-label"></label>    
-                <input type="text" class="form-control custom-input @error('task') is-invalid @enderror" name="task" placeholder="Enter the Task" id="validationCustom03">
+                <input type="text" class="input form-control custom-input @error('task') is-invalid @enderror" name="task" placeholder="Enter the Task" id="validationCustom03">
                 
                 @error('task')
                 <div class="invalid-feedback">
@@ -25,10 +27,12 @@
                 @enderror
 
                 <br/>
-                <div class="btn-inp">
-                    <input class="text-center" type="submit" value="Submit">
+                <div class="btn_inp">
+                    <input class="btn text-center" type="submit" value="Submit">
+                </div>
                 </div>
             </form>
+            </div>
         </div>
     <!-- <div>
         @if($errors->any())
