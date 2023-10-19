@@ -6,21 +6,22 @@ h1{
     color: #fff;
 }
 
-body{
+/* body{
     background-color: rgb(27, 25, 25);
-}
+} */
 .btn-inp{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .background-image {
-    background-image: url('images/images.jpeg'); /* Adjust the path to your image */
+    background-image: url(/images/create.jpg); /* Adjust the path to your image */
     background-size: cover; /* Adjust as needed */
     background-position: center center; /* Adjust as needed */
     background-repeat: no-repeat;
     height: 100vh; /* Set the height to the viewport height (full height) */
 }
+
 .custom-input{
     width: 20em;
 }
@@ -29,13 +30,13 @@ body{
     position: relative;
     padding: 10px 20px;
     border-radius: 7px;
-    border: 1px solid rgb(21, 236, 85);
+    border: 1px solid rgb(0, 82, 206, 0.815);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
     background: transparent;
-    color: #fff;
+    color: #000000;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: all 0.2s ease-in;
@@ -44,11 +45,12 @@ body{
   }
   
   .text-center:hover{
-    background: rgb(4, 249, 32);
-    box-shadow: 0 0 30px 5px rgba(4, 244, 56, 0.815);
+    background: rgb(0, 82, 206, 0.815);
+    box-shadow: 0 0 30px 5px rgba(0, 82, 206, 0.815);
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+    color: #ffffff;
   }
   
   .text-center:hover::before {

@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    margin-top: 10rem;
+    font-size:4em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+.background-image {
+    background-image: url(/images/edit.jpg); /* Adjust the path to your image */
+    background-size: cover; /* Adjust as needed */
+    background-position: center center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the height to the viewport height (full height) */
+}
+
+.custom-input{
+    width: 20em;
+}
+
+.btn-inp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
